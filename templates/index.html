@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>e-mail validation</title>
+    </head>
+<body>
+    <p>{{ session['message'] }}</p>
+    <form action='/submit' method='POST'>
+        <label for="email">e-mail address: <input type="text" name="email" id="email"></label>
+        <input type="submit" value="Validate">
+    </form>
+</body>
+</html>

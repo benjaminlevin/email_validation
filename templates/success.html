@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Success!</title>
+    </head>
+<body>
+    <h1>Email Addresses Entered</h1>
+    {% for email in all_emails: %}
+        <p>ID: {{ email['id'] }}</p>
+        <p>email address: {{ email['email'] }}</p>
+        <p>created at: {{ email['created_at'].strftime('%m/%d/%y %I:%M %p') }}</p>
+        <p>updated at: {{ email['updated_at'].strftime('%m/%d/%y %I:%M %p') }}</p>
+        <a href='/delete/{{ email['id'] }}'>
+            <button type="">Delete Email</button>
+        </a>
+    {% endfor %}
+<br>
+<br>
+<a href='/'><button>ENTER ANOTHER EMAIL</button></a>
+</body>
+</html>
